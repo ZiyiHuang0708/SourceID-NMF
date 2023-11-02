@@ -7,6 +7,7 @@ A major challenge of analyzing the compositional structure of microbiome data is
 For support using SourceID-NMF, please email: zhuang82-c@my.cityu.edu.hk
 
 ## Required Dependencies
+Detailed package information can be found in SourceID-NMF.yaml
 
 
 
