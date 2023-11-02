@@ -1,2 +1,2 @@
 # SourceID-NMF
-Microbial source tracking via Non-negative Matrix Factorization
+SourceID-NMF: Microbial source tracking via Non-negative Matrix Factorization
