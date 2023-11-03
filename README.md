@@ -138,11 +138,15 @@ This parameter represents the maximum number of iterations of the model. We set 
 
 `-r | --rho`
 
+This parameter represents the penalty parameter of the model. We set it to a default value of 1.
+
 `-a | --A`
 
 
 
 `-c | --threshold`
+
+This parameter represents he convergence threshold of the model. We set it to the default value of 1e-06. The model may terminate the iterations early due to the limitations of the convergence threshold before the maximum number of iterations is reached. The user can likewise lower the convergence threshold to see if the model outputs better results, again consuming more running time.
 
 ## Demo
 Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. Each data set contains two txt input files 'nmf_data.txt' and 'name.txt'. We can run it on simulated data or real data by running the following command:
