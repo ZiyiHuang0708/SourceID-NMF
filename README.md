@@ -32,5 +32,16 @@ conda install -c anaconda scipy
 conda install -c conda-forge tqdm
 ```
 
+## Usage
+
+#### Command
+```
+python main.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
+```
+
+
+
+
+
 
 
