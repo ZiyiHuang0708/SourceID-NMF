@@ -112,7 +112,7 @@ The specific output table case is shown below:
 
 * Perf
 
-This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration. The specific commands that can be added are as follows:
+This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration. The specific command that can be added is as follows:
 
 ```
 python SourceID-NMF.py -p pref_needed
@@ -145,7 +145,15 @@ python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportion
 
 After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks. 
 
-                     
+Finally, for simulated data, the user can also compare the estimated proportions with the true proportions to evaluate the performance of the model. We output the Jensen-Shannon divergence and the difference between the estimated and true proportions by running the evaluated pipeline and the corresponding average. The specific command is as follows                     
+```
+python data_estimation.py -e ./estimated_proportions.txt -t ./true_proportions.txt
+```
+and returns a count table containing the Jensen-Shannon divergence and Difference for each sink. the specific output table situation is as follows:
+| | D20 | D21 | D22 | ... | D27 | D28 |
+| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
+| jsd | 0.026778458 |	0.028127328	| 0.022346549 | ... | 0.024238739 |	0.02097052 |
+| diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
 
 
 
