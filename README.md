@@ -32,6 +32,12 @@ conda install -c anaconda scipy
 conda install -c conda-forge tqdm
 ```
 
+After installing, you only need to activate the "nmf" environment before using SourceID-NMF for the next time.
+```
+conda activate nmf
+```
+
+
 ## Usage
 
 #### Command
