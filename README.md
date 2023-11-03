@@ -94,9 +94,30 @@ The specific output table case is shown below:
 | ... | ... | ... | ... | ... | ... | ... |
 | D29 | 0.038159300 | 0.001559895	| 0.003974004 | ... | 0.005082442	| 0.875595719 |
 
+Meanwhile, SourceID-NMF also provides some parameters that may affect the final result, including:
+```
+Options
+-t | --thread:       Max workers for multiprocessing operation.
+-e | --iter:         Maximum number of iterations for the NMF model.
+-r | --rho:          The penalty parameter.
+-a | --A:            The weighting matrix coefficients. 
+-c | --threshold:    The convergence threshold.
+```
 
+## Demo
+Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. We can run it on simulated data or real data by running the following command:
 
+```
+Command:
+# In simulated data
+cd ./data/simulated_data
+cd ./0.60jsd / cd ./0.70jsd / cd ./0.80jsd
+python main.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
 
+# In true data
+cd ./data/true_data
+python main.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
+```
 
 
                      
