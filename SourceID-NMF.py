@@ -10,11 +10,9 @@ from data_initialization import parameters_initialize
 warnings.filterwarnings('ignore')
 
 parser = argparse.ArgumentParser(description="""Main script of SourceID-NMF.""")
-parser.add_argument('--data_path', '-i', help='Input the original source data and sink data', default='./nmf_data.txt')
-parser.add_argument('--name_path', '-n', help='Input the source data and sink data labels', default='./name.txt')
-parser.add_argument('--output_path', '-o', help='Output the result of the mixing proportions', default='./estimated_proportions.txt')
-# parser.add_argument('cluster', help='Whether to apply clustering algorithms to data preprocessing', default='normal')
-# parser.add_argument('cutoff', help='Setting the threshold for clustering', default='0.25')
+parser.add_argument('--input', '-i', help='Input the original source data and sink data', default='./nmf_data.txt')
+parser.add_argument('--name', '-n', help='Input the source data and sink data labels', default='./name.txt')
+parser.add_argument('--output', '-o', help='Output the result of the mixing proportions', default='./estimated_proportions.txt')
 parser.add_argument('--thread', '-t', help='Number of Threads for multiprocessing', type=int, default=20)
 parser.add_argument('--iter', '-e', help='Number of iterations per round for the model', type=int, default=2000)
 parser.add_argument('--rho', '-r', help='rho', type=int, default=1)
@@ -22,11 +20,9 @@ parser.add_argument('--A', '-a', help='weighting matrix factor', type=int, defau
 parser.add_argument('--threshold', '-c', help='threshold of convergence of Lagrangian functions', type=float, default=1e-06)
 inputs = parser.parse_args()
 
-data_path = inputs.data_path
-name_path = inputs.name_path
-output_path = inputs.output_path
-# mode      = inputs.cluster
-# cutoff    = inputs.cutoff
+data_path = inputs.input
+name_path = inputs.name
+output_path = inputs.output
 thread    = inputs.thread
 iteration = inputs.iter
 rho       = inputs.rho
