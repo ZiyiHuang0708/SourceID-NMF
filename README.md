@@ -53,7 +53,7 @@ The input to SourceID-NMF is composed of two txt files:
 
 Input: The input count table containing sources and sinks (M by N). where M is the number samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
 
-The specific count table case is shown below:
+The specific input table case is shown below:
 
 | | D1 | D2 | D3 | ... | D27 | D28 |
 | ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
@@ -79,10 +79,20 @@ The specific name table case is shown below:
 | D27 | fecal8 | Sink |
 | D28 | fecal9 | Sink |
 
+The output to SourceID-NMF is composed of one txt files:
 
+Output: The count table contains all the estimated proportions (K by S). where K is the number sinks and S is the number of sources (including an unknown source). The specific value in this table represents the contribution of each source to each sink. The sum of the proportions in each row is 1.
 
+The specific output table case is shown below:
 
-
+| | D1 | D2 | D3 | ... | D19 | Unknown |
+| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
+| D20 | 0.004057049 | 0.000486668	| 0.014082136 | ... | 0.068413642	| 0.048694265 |
+| D21 | 0.055386974 | 0.013956499	| 0.011004204 | ... | 0.001979577	| 0.155531113 |
+| D22 | 0.127182548 | 0.000429836	| 0.017506031 | ... | 0.016176403	| 0.280087424 |
+| D23 | 0.114428201 | 0.068275637	| 0.042867499 | ... | 0.069508314	| 0.378383698 |
+| ... | ... | ... | ... | ... | ... | ... |
+| D29 | 0.038159300 | 0.001559895	| 0.003974004 | ... | 0.005082442	| 0.875595719 |
 
 
 
