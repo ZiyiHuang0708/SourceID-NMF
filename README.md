@@ -112,7 +112,8 @@ The specific output table case is shown below:
 
 * Perf
 
-This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration. The specific commands are as follows:
+This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration. The specific commands that can be added are as follows:
+
 ```
 python SourceID-NMF.py -p pref_needed
 ```
@@ -142,7 +143,8 @@ cd ./data/true_data
 python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
 ```
 
-After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks
+After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks. 
+
                      
 
 
