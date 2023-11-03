@@ -46,7 +46,7 @@ As input, SourceID-NMF provides a number of parameters for different purposes. S
 ```
 Options
 -i | --input:        A path to an input.txt file: Input of count table.
--n | --name:         A path to an name.txt file: Data labels and tags for input data. 
+-n | --name:         A path to an name.txt file: Data labels for input data. 
 -o | --output:       A path to an output.txt file: Output of estimated proportions.
 ```
 The input to SourceID-NMF is composed of two txt files:
@@ -64,7 +64,7 @@ The specific count table case is shown below:
 | ... | 0 | 23 | 15 | ... | 0 | 23 |
 | taxon_n  |  24 | 25 | 0 | ... | 0 | 14 |
 
-Name: The name table containing four columns, 'SampleID', 'Env', 'SourceSink' and 'id'. 
+Name: The name table containing four columns, 'SampleID', 'Env', 'SourceSink' and 'id'. The 'SampleID' column describes the labels for each source data or sink data. 
 
 | SampleID | Env |SourceSink | id |
 | ------------- | ------------- |------------- |-------------|
