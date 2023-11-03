@@ -39,9 +39,29 @@ conda install -c conda-forge tqdm
 python main.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
 ```
 
+#### Parameters
+
+As input, SourceID-NMF provides a number of parameters for different purposes. Some of the parameters exist as inputs and outputs of data, including:
+
+```
+Options
+-i | --input:        A path to an input.txt file.
+-n | --name:         Data labels and tags for input data. 
+-o | --output:       A path to an output.txt file.
+```
+Input: A count table containing sources and sinks (M by N). where M is the number samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
 
 
 
+
+
+
+
+
+
+
+
+                     
 
 
 
