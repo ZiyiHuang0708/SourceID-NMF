@@ -16,7 +16,10 @@ Detailed package information can be found in SourceID-NMF.yaml. The main environ
 
 We suggest to install SourceID-NMF's environment SourceID-NMF.yaml by using anaconda after cloning the repository. This will install all the required packages in cpu mode.
 
-The command is: `conda env create -f SourceID-NMF.yaml -n nmf`
+The command is: 
+```
+conda env create -f SourceID-NMF.yaml -n nmf
+```
 
 Alternatively, you can use conda to install all packages, as shown on the command line below:
 ```
