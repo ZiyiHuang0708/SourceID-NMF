@@ -105,7 +105,7 @@ Options
 ```
 
 ## Demo
-Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. We can run it on simulated data or real data by running the following command:
+Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. Each data set contains two txt input files 'nmf_data.txt' and 'name.txt'. We can run it on simulated data or real data by running the following command:
 
 ```
 Command:
@@ -119,7 +119,7 @@ cd ./data/true_data
 python main.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
 ```
 
-
+After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks
                      
 
 
