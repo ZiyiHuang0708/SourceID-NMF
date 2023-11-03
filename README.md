@@ -61,7 +61,7 @@ Options
 ```
 The input to SourceID-NMF is composed of two txt files:
 
-* Input
+`-i | --input`
 
 The input count table containing sources and sinks (M by N). where M is the number samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
 
@@ -77,7 +77,7 @@ The specific input table case is shown below:
 | ... | ... | ... | ... | ... | ... | ... |
 | taxon_n  |  24 | 25 | 0 | ... | 0 | 14 |
 
-* Name
+`-n | --name`
 
 The name table containing four columns, 'SampleID', 'Env' and 'SourceSink'. The 'SampleID' column describes the labels for each source data or sink data. The 'Env' column describes the environment to which each source or sink belongs, e.g. the first row Env = 'Electronics' means that the source was collected from Electronics. This 'SourceSink' column describes the source or sink to which the data belongs. 
 
@@ -95,7 +95,7 @@ The specific name table case is shown below:
 
 The output to SourceID-NMF is composed of one txt files:
 
-* Output
+`-o | --output`
 
 The count table contains all the estimated proportions (K by S). where K is the number sinks and S is the number of sources (including an unknown source). The specific value in this table represents the contribution of each source to each sink. The sum of the proportions in each row is 1.
 
@@ -110,7 +110,7 @@ The specific output table case is shown below:
 | ... | ... | ... | ... | ... | ... | ... |
 | D29 | 0.038159300 | 0.001559895	| 0.003974004 | ... | 0.005082442	| 0.875595719 |
 
-* Perf
+`-m | --perf`
 
 This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration. The specific command that can be added is as follows:
 
