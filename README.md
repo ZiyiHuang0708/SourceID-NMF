@@ -74,9 +74,9 @@ The specific name table case is shown below:
 | D1 | Electronic | Source |
 | D2 | Hand | Source |
 | D3 | Incubator | Source|
-| D4 | Surface | Source |
-| D5 | fecal1 | Sink |
+| D4 | Surface | Source|
 | ... | ... | ... |
+| D27 | fecal8 | Sink |
 | D28 | fecal9 | Sink |
 
 
