@@ -51,22 +51,29 @@ Options
 ```
 The input to SourceID-NMF is composed of two txt files:
 
-Input: A count table containing sources and sinks (M by N). where M is the number samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
+Input: The input count table containing sources and sinks (M by N). where M is the number samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
 
 The specific count table case is shown below:
 
-| | Source1 | Source2 | Source3 | ... |  Sink1  |  Sink2  |
+| | D1 | D2 | D3 | ... | D27 | D28 |
 | ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
 | taxon_1  |  0 | 5 | 0 | ... | 20 | 5 |
 | taxon_2  |  20 | 5 | 0 | ... | 0 | 11 |
 | taxon_3  |  0 | 13 | 210 | ... | 0 | 20 |
-| taxon_4  |  8 | 6 | 0 | ... | 0 | 0 |
-| taxon_5  |  0 | 6 | 0 | ... | 20 | 0 |
-| taxon_6  |  18 | 5 | 0 | ... | 0 | 12 |
-| ... | 0 | 23 | 210 | ... | 0 | 23 |
+| taxon_4  |  80 | 6 | 0 | ... | 0 | 0 |
+| ... | 0 | 23 | 15 | ... | 0 | 23 |
 | taxon_n  |  24 | 25 | 0 | ... | 0 | 14 |
 
-Name: 
+Name: The name table containing four columns, 'SampleID', 'Env', 'SourceSink' and 'id'. 
+
+| SampleID | Env |SourceSink | id |
+| ------------- | ------------- |------------- |-------------|
+| D1 |  | Source | NA |
+| D2 |  | Source | NA |
+| D3 |  | Source| NA |
+| D4 |  | Source | NA |
+| ... |  | Sink | ... |
+| D28 |  | Sink | 9 |
 
 
 
