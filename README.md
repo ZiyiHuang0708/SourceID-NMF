@@ -61,19 +61,23 @@ The specific count table case is shown below:
 | taxon_2  |  20 | 5 | 0 | ... | 0 | 11 |
 | taxon_3  |  0 | 13 | 210 | ... | 0 | 20 |
 | taxon_4  |  80 | 6 | 0 | ... | 0 | 0 |
-| ... | 0 | 23 | 15 | ... | 0 | 23 |
+| taxon_5  |  4 | 38 | 0 | ... | 14 | 0 |
+| ... | ... | ... | ... | ... | ... | ... |
 | taxon_n  |  24 | 25 | 0 | ... | 0 | 14 |
 
-Name: The name table containing four columns, 'SampleID', 'Env', 'SourceSink' and 'id'. The 'SampleID' column describes the labels for each source data or sink data. 
+Name: The name table containing four columns, 'SampleID', 'Env', 'SourceSink' and 'id'. The 'SampleID' column describes the labels for each source data or sink data. The 'Env' column describes the environment to which each source or sink belongs, e.g. the first row Env = 'Electronics' means that the source was collected from Electronics. This 'SourceSink' column describes the source or sink to which the data belongs. 
 
-| SampleID | Env |SourceSink | id |
-| ------------- | ------------- |------------- |-------------|
-| D1 |  | Source | NA |
-| D2 |  | Source | NA |
-| D3 |  | Source| NA |
-| D4 |  | Source | NA |
-| ... |  | Sink | ... |
-| D28 |  | Sink | 9 |
+The specific name table case is shown below:
+
+| SampleID | Env |SourceSink |
+| ------------- | ------------- |------------- |
+| D1 | Electronic | Source |
+| D2 | Hand | Source |
+| D3 | Incubator | Source|
+| D4 | Surface | Source |
+| D5 | fecal1 | Sink |
+| ... | ... | ... |
+| D28 | fecal9 | Sink |
 
 
 
