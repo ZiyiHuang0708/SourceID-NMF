@@ -128,6 +128,22 @@ Options
 -c | --threshold:    The convergence threshold.
 ```
 
+`-t | --thread`
+
+In SourceID-NMF, we can execute multiple tasks concurrently by creating a thread pool, thus improving the performance and efficiency of the program. This parameter represents the ThreadPoolExecutor parameter max_workers, which specifies the maximum number of threads in the thread pool. We set it to the default value of 20. The selection of this parameter should be less than or equal to the number of CPUs. We can gradually increase the number of parameters to improve the speed of the model iteration.
+
+`-e | --iter`
+
+This parameter represents the maximum number of iterations of the model. We set it to the default value of 2000 iterations. The user can increase the number of iterations as well to observe if the model outputs better results, but again this will consume more running time.
+
+`-r | --rho`
+
+`-a | --A`
+
+
+
+`-c | --threshold`
+
 ## Demo
 Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. Each data set contains two txt input files 'nmf_data.txt' and 'name.txt'. We can run it on simulated data or real data by running the following command:
 
