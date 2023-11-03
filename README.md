@@ -65,7 +65,7 @@ The specific input table case is shown below:
 | ... | ... | ... | ... | ... | ... | ... |
 | taxon_n  |  24 | 25 | 0 | ... | 0 | 14 |
 
-Name: The name table containing four columns, 'SampleID', 'Env', 'SourceSink' and 'id'. The 'SampleID' column describes the labels for each source data or sink data. The 'Env' column describes the environment to which each source or sink belongs, e.g. the first row Env = 'Electronics' means that the source was collected from Electronics. This 'SourceSink' column describes the source or sink to which the data belongs. 
+Name: The name table containing four columns, 'SampleID', 'Env' and 'SourceSink'. The 'SampleID' column describes the labels for each source data or sink data. The 'Env' column describes the environment to which each source or sink belongs, e.g. the first row Env = 'Electronics' means that the source was collected from Electronics. This 'SourceSink' column describes the source or sink to which the data belongs. 
 
 The specific name table case is shown below:
 
