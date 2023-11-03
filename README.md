@@ -57,6 +57,7 @@ Options
 -i | --input:        A path to an input.txt file: Input of count table.
 -n | --name:         A path to an name.txt file: Data labels for input data. 
 -o | --output:       A path to an output.txt file: Output of estimated proportions.
+-m | --perf:         A path to an output.txt file: Output of model performance including jsd_wy and diff_xwh.
 ```
 The input to SourceID-NMF is composed of two txt files:
 
@@ -108,6 +109,10 @@ The specific output table case is shown below:
 | D23 | 0.114428201 | 0.068275637	| 0.042867499 | ... | 0.069508314	| 0.378383698 |
 | ... | ... | ... | ... | ... | ... | ... |
 | D29 | 0.038159300 | 0.001559895	| 0.003974004 | ... | 0.005082442	| 0.875595719 |
+
+* Perf
+
+This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration.
 
 Meanwhile, SourceID-NMF also provides some parameters that may affect the final result, including:
 ```
