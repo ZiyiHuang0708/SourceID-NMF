@@ -142,7 +142,7 @@ This parameter represents the penalty parameter of the model. We set it to a def
 
 `-a | --A`
 
-
+In SourceID-NMF, we incorporate a weight matrix $A$ to regulate the similarity between the estimated taxa abundance and the observed taxa abundance in the sources. This parameter represents the coefficients of the weighting matrix. We set it to the default value of 1. The user can adjust the value of this parameter to increase the tolerance of the difference between W and Y in the formula. 
 
 `-c | --threshold`
 
