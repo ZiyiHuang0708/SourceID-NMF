@@ -175,5 +175,8 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 | jsd | 0.026778458 |	0.028127328	| 0.022346549 | ... | 0.024238739 |	0.020970519 |
 | diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
 
+## Simulation data
+Simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/
+
 
 
