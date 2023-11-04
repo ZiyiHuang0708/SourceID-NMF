@@ -149,7 +149,7 @@ In SourceID-NMF, we incorporate a weight matrix $A$ to regulate the similarity b
 This parameter represents he convergence threshold of the model. We set it to the default value of 1e-06. The model may terminate the iterations early due to the limitations of the convergence threshold before the maximum number of iterations is reached. The user can likewise lower the convergence threshold to see if the model outputs better results, again consuming more running time.
 
 ## Demo
-Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. Each data set contains two txt input files 'nmf_data.txt' and 'name.txt'. We can run it on simulated data or real data by running the following command:
+Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. Each data set contains two txt input files 'nmf_data.txt' and 'name.txt'. The real data were used to track potential sources of colonizing microbes in the gut environment of infants from the Neonatal Intensive Care Unit (NICU) provided by Brandon Brooks et al.[1] We can run it on simulated data or real data by running the following command:
 
 ```
 Command:
@@ -176,7 +176,8 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 | diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
 
 ## Simulation data
-Simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/
+Simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [2]
 
-
-
+## References
+[1] Brandon Brooks, Brian A Firek, Christopher S Miller, Itai Sharon, Brian C Thomas, Robyn Baker, Michael J Morowitz, and Jillian F Banfield. Microbes in the neonatal intensive care unit resemble those found in the gut of premature infants. Microbiome, 2:1–16, 2014.
+[2] Thompson, L. R. et al. A communal catalogue reveals Earth’s multiscale microbial diversity. Nature 551, 457–463 (2017).
