@@ -45,7 +45,7 @@ conda activate nmf
 
 #### Command
 ```
-python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
+python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
 ```
 
 #### Parameters
@@ -154,13 +154,14 @@ Here, we provide some datasets for SourceID-NMF to test. The /data folder contai
 ```
 Command:
 # In simulated data
-cd ./data/simulated_data
-cd ./0.60jsd / cd ./0.70jsd / cd ./0.80jsd
-python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
+python SourceID-NMF.py -i ./data/simulated_data/0.60jsd/nmf_data.txt -n ./data/simulated_data/0.60jsd/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
+or
+python SourceID-NMF.py -i ./data/simulated_data/0.70jsd/nmf_data.txt -n ./data/simulated_data/0.70jsd/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
+or
+python SourceID-NMF.py -i ./data/simulated_data/0.80jsd/nmf_data.txt -n ./data/simulated_data/0.80jsd/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
 
 # In true data
-cd ./data/true_data
-python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 20 -e 20 -r 1 -a 1 -c 1e-06
+python SourceID-NMF.py -i ./data/true_data/nmf_data.txt -n ./data/true_data/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
 ```
 
 After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks. 
