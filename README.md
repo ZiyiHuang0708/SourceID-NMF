@@ -146,7 +146,7 @@ In SourceID-NMF, we incorporate a weight matrix $A$ to regulate the similarity b
 This parameter represents he convergence threshold of the model. We set it to the default value of 1e-06. The model may terminate the iterations early due to the limitations of the convergence threshold before the maximum number of iterations is reached. The user can likewise lower the convergence threshold to see if the model outputs better results, again consuming more running time.
 
 ## Demo
-Here we provide some datasets for SourceID-NMF testing. The /data folder has one test data set containing two txt input files "nmf_data.txt" and "name.txt". We can run it on the test data by running the following command:
+Here, we provide some datasets for SourceID-NMF testing. The /data folder has one test data set containing two txt input files, "nmf_data.txt" and "name.txt". We can run it on the test data by running the following command:
 
 ```
 python SourceID-NMF.py -i ./data/nmf_data.txt -n ./data/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
@@ -154,7 +154,7 @@ python SourceID-NMF.py -i ./data/nmf_data.txt -n ./data/name.txt -o ./estimated_
 
 After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks. 
 
-Finally, for simulated data, the user can also compare the estimated proportions with the true proportions to evaluate the performance of the model. We output the Jensen-Shannon divergence and the difference between the estimated and true proportions by running the evaluated pipeline and the corresponding average. The specific command is as follows                     
+Finally, for simulated data, the user can also compare the estimated proportions with the true proportions to evaluate the performance of the model. We output the Jensen-Shannon divergence and the difference between the estimated and true proportions by running the evaluated pipeline and the corresponding average. The specific command is as follows.                     
 ```
 python data_estimation.py -e ./data/estimated_proportions.txt -t ./data/true_proportions.txt
 ```
@@ -165,7 +165,9 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 | diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
 
 ## Simulation data
-The simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [1]. We downloaded the emp cr_gg_13 8.subset 2k.rare 10000.biom file from this link and extracted the sources from it as our simulation data.
+Our simulated data was generated using the microbial data from the Earth's microbiome project [1]. It can be downloaded from http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [1]. We used the emp cr_gg_13 8.subset 2k.rare 10000.biom file from this link to simulate data.
+
+One can use the following command to simulate data with an inter-source divergence of 0.7 JSD.
 
 ```
 python data_output.py -i ./0.70jsd.txt -s 100000
