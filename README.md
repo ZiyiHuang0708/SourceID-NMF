@@ -26,9 +26,7 @@ Alternatively, you can use conda to install all packages, as shown on the comman
 conda create -n nmf python=3.8.13
 
 # install some basic conda packages to support the modeling operations
-conda install -c anaconda numpy
-conda install -c anaconda pandas
-conda install -c anaconda scipy
+conda install -c anaconda numpy pandas scipy
 
 # multiprocessing tqdm progress bar display
 conda install -c conda-forge tqdm
