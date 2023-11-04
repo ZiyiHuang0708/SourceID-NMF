@@ -121,11 +121,11 @@ python SourceID-NMF.py -p pref_needed
 Meanwhile, SourceID-NMF also provides some parameters that may affect the final result, including:
 ```
 Options
--t | --thread:       Max workers for multiprocessing operation.
--e | --iter:         Maximum number of iterations for the NMF model.
--r | --rho:          The penalty parameter.
--a | --A:            The weighting matrix coefficients. 
--c | --threshold:    The convergence threshold.
+-t | --thread:       Max workers for multiprocessing operation. (default:20)
+-e | --iter:         Maximum number of iterations for the NMF model. (default:2000)
+-r | --rho:          The penalty parameter. (default:1)
+-a | --A:            The weighting matrix coefficients. (default:1)
+-c | --threshold:    The convergence threshold. (default:1e-06)
 ```
 
 `-t | --thread`
