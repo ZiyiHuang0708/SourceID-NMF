@@ -180,4 +180,5 @@ The simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1
 
 ## References
 [1] Brandon Brooks, Brian A Firek, Christopher S Miller, Itai Sharon, Brian C Thomas, Robyn Baker, Michael J Morowitz, and Jillian F Banfield. Microbes in the neonatal intensive care unit resemble those found in the gut of premature infants. Microbiome, 2:1–16, 2014.
+
 [2] Thompson, L. R. et al. A communal catalogue reveals Earth’s multiscale microbial diversity. Nature 551, 457–463 (2017).
