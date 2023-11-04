@@ -154,14 +154,14 @@ Here we provide some datasets for SourceID-NMF testing. The /data folder has one
 ```
 Command:
 # In test data
-python SourceID-NMF.py -i ./data/simulated_data/nmf_data.txt -n ./data/simulated_data/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
+python SourceID-NMF.py -i ./data/nmf_data.txt -n ./data/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
 ```
 
 After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks. 
 
 Finally, for simulated data, the user can also compare the estimated proportions with the true proportions to evaluate the performance of the model. We output the Jensen-Shannon divergence and the difference between the estimated and true proportions by running the evaluated pipeline and the corresponding average. The specific command is as follows                     
 ```
-python data_estimation.py -e ./data/simulated_data/0.80jsd/estimated_proportions.txt -t ./data/simulated_data/0.80jsd/true_proportions.txt
+python data_estimation.py -e ./data/estimated_proportions.txt -t ./data/true_proportions.txt
 ```
 and returns a count table containing the Jensen-Shannon divergence and Difference for each sink. the specific output table situation is as follows:
 | | D20 | D21 | D22 | ... | D27 | D28 |
