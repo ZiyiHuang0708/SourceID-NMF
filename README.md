@@ -5,6 +5,7 @@ A major challenge in analyzing the compositional structure of microbiome data is
 
 ![Image text](https://github.com/ZiyiHuang0708/SourceID-NMF/blob/main/image/NMF.png)
 
+![Image text](https://github.com/ZiyiHuang0708/SourceID-NMF/blob/main/image/NMF.pdf)
 
 
 ## Support
