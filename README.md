@@ -149,26 +149,19 @@ In SourceID-NMF, we incorporate a weight matrix $A$ to regulate the similarity b
 This parameter represents he convergence threshold of the model. We set it to the default value of 1e-06. The model may terminate the iterations early due to the limitations of the convergence threshold before the maximum number of iterations is reached. The user can likewise lower the convergence threshold to see if the model outputs better results, again consuming more running time.
 
 ## Demo
-Here, we provide some datasets for SourceID-NMF to test. The /data folder contains sections for simulated data and real data. The section on simulated data contains three sets of data available for testing. Each data set contains two txt input files 'nmf_data.txt' and 'name.txt'. The real data were used to track potential sources of colonizing microbes in the gut environment of infants from the Neonatal Intensive Care Unit (NICU) provided by Brandon Brooks et al.[1] We can run it on simulated data or real data by running the following command:
+Here we provide some datasets for SourceID-NMF testing. The /data folder has one test data set containing two txt input files "nmf_data.txt" and "name.txt". We can run it on the test data by running the following command:
 
 ```
 Command:
-# In simulated data
-python SourceID-NMF.py -i ./data/simulated_data/0.60jsd/nmf_data.txt -n ./data/simulated_data/0.60jsd/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
-or
-python SourceID-NMF.py -i ./data/simulated_data/0.70jsd/nmf_data.txt -n ./data/simulated_data/0.70jsd/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
-or
+# In test data
 python SourceID-NMF.py -i ./data/simulated_data/0.80jsd/nmf_data.txt -n ./data/simulated_data/0.80jsd/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
-
-# In true data
-python SourceID-NMF.py -i ./data/true_data/nmf_data.txt -n ./data/true_data/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
 ```
 
 After running the code, you can find the file 'estimated_proportions.txt' in the folder corresponding to that dataset, which contains the results of the model run, i.e., the contributions of the sources to the sinks. 
 
 Finally, for simulated data, the user can also compare the estimated proportions with the true proportions to evaluate the performance of the model. We output the Jensen-Shannon divergence and the difference between the estimated and true proportions by running the evaluated pipeline and the corresponding average. The specific command is as follows                     
 ```
-python data_estimation.py -e ./estimated_proportions.txt -t ./true_proportions.txt
+python data_estimation.py -e ./data/simulated_data/0.80jsd/estimated_proportions.txt -t ./data/simulated_data/0.80jsd/true_proportions.txt
 ```
 and returns a count table containing the Jensen-Shannon divergence and Difference for each sink. the specific output table situation is as follows:
 | | D20 | D21 | D22 | ... | D27 | D28 |
@@ -177,7 +170,11 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 | diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
 
 ## Simulation data
-The simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [2]
+The simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [2]. We downloaded the emp cr_gg_13 8.subset 2k.rare 10000.biom file from this link and extracted the sources from it as our simulation data.
+
+```
+python data_output.py -i ./0.70jsd.txt -s 100000
+```
 
 ## References
 [1] Brandon Brooks, Brian A Firek, Christopher S Miller, Itai Sharon, Brian C Thomas, Robyn Baker, Michael J Morowitz, and Jillian F Banfield. Microbes in the neonatal intensive care unit resemble those found in the gut of premature infants. Microbiome, 2:1–16, 2014.
