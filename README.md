@@ -3,7 +3,7 @@ SourceID-NMF: Towards more accurate microbial source tracking via non-negative m
 
 A major challenge in analyzing the compositional structure of microbiome data is identifying its potential origins. Here, we introduce a novel tool called SourceID-NMF for precise microbial source tracking. SourceID-NMF utilizes a non-negative matrix factorization (NMF) algorithm to trace the microbial sources contributing to a target sample.
 
-<img src='image/NMF.png'>
+<img src='image/NMF.png' width="1244" height="595">
 
 
 
