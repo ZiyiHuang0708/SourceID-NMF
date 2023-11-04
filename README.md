@@ -152,8 +152,6 @@ This parameter represents he convergence threshold of the model. We set it to th
 Here we provide some datasets for SourceID-NMF testing. The /data folder has one test data set containing two txt input files "nmf_data.txt" and "name.txt". We can run it on the test data by running the following command:
 
 ```
-Command:
-# In test data
 python SourceID-NMF.py -i ./data/nmf_data.txt -n ./data/name.txt -o ./estimated_proportions.txt -t 20 -e 2000 -r 1 -a 1 -c 1e-06
 ```
 
