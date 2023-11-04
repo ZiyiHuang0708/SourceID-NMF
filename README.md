@@ -176,7 +176,7 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 | diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
 
 ## Simulation data
-Simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [2]
+The simulation datasets can be downloaded at http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [2]
 
 ## References
 [1] Brandon Brooks, Brian A Firek, Christopher S Miller, Itai Sharon, Brian C Thomas, Robyn Baker, Michael J Morowitz, and Jillian F Banfield. Microbes in the neonatal intensive care unit resemble those found in the gut of premature infants. Microbiome, 2:1–16, 2014.
