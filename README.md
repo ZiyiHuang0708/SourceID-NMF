@@ -1,8 +1,7 @@
 # SourceID-NMF
 SourceID-NMF: Towards more accurate microbial source tracking via non-negative matrix factorization.
 
-A major challenge of analyzing the compositional structure of microbiome data is identifying its potential origins. Here, we introduce a novel tool called SourceID-NMF for precise microbial source tracking. SourceID-NMF utilizes a non-negative matrix factorization (NMF) algorithm to trace the microbial sources contributing to a target sample, without relying on specific probability distributions.
-
+A major challenge in analyzing the compositional structure of microbiome data is identifying its potential origins. Here, we introduce a novel tool called SourceID-NMF for precise microbial source tracking. SourceID-NMF utilizes a non-negative matrix factorization (NMF) algorithm to trace the microbial sources contributing to a target sample.
 ## Support
 For support using SourceID-NMF, please email: zhuang82-c@my.cityu.edu.hk
 
@@ -14,7 +13,7 @@ Detailed package information can be found in SourceID-NMF.yaml. The main environ
 * pandas >=2.0.3
 * tqdm >=4.66.1
 
-We suggest to install SourceID-NMF's environment SourceID-NMF.yaml by using anaconda after cloning the repository. This will install all the required packages in cpu mode.
+We suggest installing SourceID-NMF's environment SourceID-NMF.yaml by using Anaconda after cloning the repository. This will install all the required packages in CPU mode.
 
 The command is: 
 ```
@@ -50,7 +49,7 @@ python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportion
 
 #### Parameters
 
-As input, SourceID-NMF provides a number of parameters for different purposes. Some of the parameters exist as inputs and outputs of data, including:
+As input, SourceID-NMF provides some parameters for different purposes. Some of the parameters exist as inputs and outputs of data, including:
 
 ```
 Options
@@ -63,7 +62,7 @@ The input to SourceID-NMF is composed of two txt files:
 
 `-i | --input`
 
-The input count table containing sources and sinks (M by N). where M is the number samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
+The input count table containing sources and sinks (M by N). where M is the number of samples and N is the number of taxa. Row names are the sample ids ('SampleID'). Column names are the taxa ids. Every consecutive column contains read counts for each sample.
 
 The specific input table case is shown below:
 
@@ -79,7 +78,7 @@ The specific input table case is shown below:
 
 `-n | --name`
 
-The name table containing four columns, 'SampleID', 'Env' and 'SourceSink'. The 'SampleID' column describes the labels for each source data or sink data. The 'Env' column describes the environment to which each source or sink belongs, e.g. the first row Env = 'Electronics' means that the source was collected from Electronics. This 'SourceSink' column describes the source or sink to which the data belongs. 
+The name table contains four columns, 'SampleID', 'Env' and 'SourceSink'. The 'SampleID' column describes the labels for each source data or sink data. The 'Env' column describes the environment to which each source or sink belongs, e.g. the first row Env = 'Electronics' means that the source was collected from Electronics. This 'SourceSink' column describes the source or sink to which the data belongs. 
 
 The specific name table case is shown below:
 
