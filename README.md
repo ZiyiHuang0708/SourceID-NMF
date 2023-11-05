@@ -30,6 +30,7 @@ conda env create -f SourceID-NMF.yaml -n nmf
 Alternatively, you can use conda to install all packages, as shown on the command line below:
 ```
 # create a new environment nmf with python 3.8 using conda
+
 conda create -n nmf python=3.8.13
 
 conda activate nmf
