@@ -36,7 +36,6 @@ conda create -n nmf python=3.8.13
 conda activate nmf
 
 pip install numpy pandas tqdm scipy
-
 ```
 
 After installing, you only need to activate the "nmf" environment before using SourceID-NMF for the next time.
