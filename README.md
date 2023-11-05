@@ -18,6 +18,7 @@ Detailed package information can be found in SourceID-NMF.yaml. The main environ
 * numpy >=1.24.3
 * pandas >=2.0.3
 * tqdm >=4.66.1
+* scipy >=1.10.1
 
 We suggest installing SourceID-NMF's environment SourceID-NMF.yaml by using Anaconda after cloning the repository. This will install all the required packages in CPU mode.
 
@@ -31,11 +32,10 @@ Alternatively, you can use conda to install all packages, as shown on the comman
 # create a new environment nmf with python 3.8 using conda
 conda create -n nmf python=3.8.13
 
-# install some basic conda packages to support the modeling operations
-conda install -c anaconda numpy pandas scipy
+conda activate nmf
 
-# multiprocessing tqdm progress bar display
-conda install -c conda-forge tqdm
+pip install numpy pandas tqdm scipy
+
 ```
 
 After installing, you only need to activate the "nmf" environment before using SourceID-NMF for the next time.
