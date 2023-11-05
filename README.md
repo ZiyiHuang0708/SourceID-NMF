@@ -66,6 +66,8 @@ Options
 -o | --output:       A path to an output.txt file: Output of estimated proportions.
 -m | --perf:         A path to an output.txt file: Output of model performance including jsd_wy and diff_xwh.
 ```
+Suppose a dataset has 19 sources, represented by D1, D2,... ,D19, and 9 sinks, represented by D20, D21,... , D28.
+
 The input to SourceID-NMF is composed of two txt files:
 
 `-i | --input`
@@ -169,10 +171,11 @@ Finally, for simulated data, the user can also compare the estimated proportions
 python data_estimation.py -e ./data/estimated_proportions.txt -t ./data/true_proportions.txt
 ```
 and returns a count table containing the Jensen-Shannon divergence and Difference for each sink. the specific output table situation is as follows:
-| | D20 | D21 | D22 | ... | D27 | D28 |
-| ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
-| jsd | 0.026778458 |	0.028127328	| 0.022346549 | ... | 0.024238739 |	0.020970519 |
-| diff | 0.044952174 | 0.059389095 | 0.023721148 | ... | 0.021662893 | 0.013772901 |
+
+| | D20 |
+| ------------- | ------------- |
+| jsd | 0.013199137 |
+| diff | 0.034919905 |
 
 ## Simulation data
 Our simulated data was generated using the microbial data from the Earth's microbiome project [1]. It can be downloaded from http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [1]. We used the emp cr_gg_13 8.subset 2k.rare 10000.biom file from this link to simulate data.
