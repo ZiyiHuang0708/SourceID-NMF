@@ -20,15 +20,15 @@ Detailed package information can be found in SourceID-NMF.yaml. The main environ
 * tqdm >=4.66.1
 * scipy >=1.10.1
 
-We suggest installing SourceID-NMF's environment "*.yaml" by using Anaconda after cloning the repository. This will install all the required packages in CPU mode.
+We suggest installing SourceID-NMF's environment "*.yml" by using Anaconda after cloning the repository. This will install all the required packages in CPU mode.
 
 The command is: 
 ```
 Linux version
-conda env create -f SourceID-NMF.yaml -n nmf
+conda env create -f nmf_linux.yml -n nmf
 
-mac version
-conda env create -f nmf_mac.yaml -n nmf
+Mac version
+conda env create -f nmf_mac.yml -n nmf
 ```
 
 Alternatively, you can use conda to install all packages, as shown on the command line below:
