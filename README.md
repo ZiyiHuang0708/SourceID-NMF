@@ -173,11 +173,6 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 ## Simulation data
 Our simulated data was generated using the microbial data from the Earth's microbiome project [1]. It can be downloaded from http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [1]. We used the emp cr_gg_13 8.subset 2k.rare 10000.biom file from this link to simulate data.
 
-One can use the following command to simulate data with an inter-source divergence of 0.7 JSD.
-
-```
-python data_output.py -i ./0.70jsd.txt -s 100000
-```
 
 ## References
 [1] Thompson, L. R. et al. A communal catalogue reveals Earth’s multiscale microbial diversity. Nature 551, 457–463 (2017).
