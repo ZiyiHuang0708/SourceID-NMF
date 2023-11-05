@@ -48,7 +48,7 @@ conda activate nmf
 
 #### Command
 ```
-python SourceID-NMF.py -i ./nmf_data.txt -n ./name.txt -o ./estimated_proportions.txt -t 8
+python SourceID-NMF.py -i ./data/nmf_data.txt -n ./data/name.txt -o ./estimated_proportions.txt -t 8
 ```
 
 #### Parameters
