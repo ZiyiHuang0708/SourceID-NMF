@@ -163,7 +163,7 @@ After running the code, you can find the file 'estimated_proportions.txt' in the
 
 Finally, for simulated data, the user can also compare the estimated proportions with the true proportions to evaluate the performance of the model. We output the Jensen-Shannon divergence and the difference between the estimated and true proportions by running the evaluated pipeline and the corresponding average. The specific command is as follows.                     
 ```
-python data_estimation.py -e ./data/estimated_proportions.txt -t ./data/true_proportions.txt
+python data_estimation.py -e ./estimated_proportions.txt -t ./data/true_proportions.txt
 ```
 and returns a count table containing the Jensen-Shannon divergence and Difference for each sink. the specific output table situation is as follows:
 
