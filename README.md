@@ -114,13 +114,6 @@ The specific output table case is shown below:
 | ------------- | ------------- |------------- |------------- |------------- |------------- |------------- |
 | D20 | 0.021288945 |	0.013085965 |	0.008938594 | ... |	0.005083895 |	0.485646292 |
 
-`-m | --perf`
-
-This is an optional parameter for the user. When this parameter = 'perf_needed' it means that the user needs to output the final result of the model iteration. This output includes the similarity between W_plus and Y as measured by Jensen-Shannon divergence, and the difference between X and WH. With these results we can evaluate the performance of the model iteration. The specific command that can be added is as follows:
-
-```
-python SourceID-NMF.py -p pref_needed
-```
 
 Meanwhile, SourceID-NMF also provides some parameters that may affect the final result, including:
 ```
