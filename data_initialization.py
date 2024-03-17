@@ -4,7 +4,7 @@ import numpy as np
 
 def standardization(matrix):
     matrix_sum = np.sum(matrix, axis=0)
-    matrix = matrix / matrix_sum[np.newaxis, :]
+    matrix = matrix / (matrix_sum[np.newaxis, :]+1e-10)
     return matrix
 
 
