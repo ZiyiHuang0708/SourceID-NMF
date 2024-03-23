@@ -173,6 +173,12 @@ and returns a count table containing the Jensen-Shannon divergence and Differenc
 | jsd | 0.013199137 |
 | diff | 0.034919905 |
 
+If the user wishes to cluster the source before running the source trace analysis, the specific command is as follows.
+
+```
+python SourceID-NMF.py -m cluster -i ./data/nmf_data.txt -n ./data/name.txt -o ./estimated_proportions.txt
+```
+
 ## Simulation data
 Our simulated data was generated using the microbial data from the Earth's microbiome project [1]. It can be downloaded from http://ftp.microbio.me/emp/release1/otu_tables/closed_ref_greengenes/ [1]. We used the emp cr_gg_13 8.subset 2k.rare 10000.biom file from this link to simulate data.
 
