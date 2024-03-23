@@ -122,9 +122,9 @@ Options
 -e | --iter:         Maximum number of iterations for the NMF model. (default:2000)
 -r | --rho:          The penalty parameter. (default:1)
 -a | --A:            The weighting matrix coefficients. (default:1)
--c | --convergence threshold:    The convergence threshold. (default:1e-06)
+-c | --threshold:    The convergence threshold. (default:1e-06)
 -m | --clustering:   The option to cluster similar sources before doing source tracking analysis (default:normal/cluster)
--f | --clustering threshold:   The option to cluster similar sources before doing source tracking analysis (default:normal/cluster)
+-f | --threshold:    The clustering threshold e.g., JSD < threshold (default:0.25)
 ```
 
 `-t | --thread`
