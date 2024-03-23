@@ -122,7 +122,9 @@ Options
 -e | --iter:         Maximum number of iterations for the NMF model. (default:2000)
 -r | --rho:          The penalty parameter. (default:1)
 -a | --A:            The weighting matrix coefficients. (default:1)
--c | --threshold:    The convergence threshold. (default:1e-06)
+-c | --convergence threshold:    The convergence threshold. (default:1e-06)
+-m | --clustering:   The option to cluster similar sources before doing source tracking analysis (default:normal/cluster)
+-f | --clustering threshold:   The option to cluster similar sources before doing source tracking analysis (default:normal/cluster)
 ```
 
 `-t | --thread`
@@ -141,12 +143,15 @@ This parameter represents the penalty parameter of the model. We set it to a def
 
 In SourceID-NMF, we incorporate a weight matrix $A$ to regulate the similarity between the estimated taxa abundance and the observed taxa abundance in the sources. This parameter represents the coefficients of the weighting matrix. We set it to the default value of 1. The user can adjust the value of this parameter to increase the tolerance of the difference between W and Y in the formula. 
 
-`-c | --threshold`
+`-c | --convergence threshold`
 
 This parameter represents he convergence threshold of the model. We set it to the default value of 1e-06. The model may terminate the iterations early due to the limitations of the convergence threshold before the maximum number of iterations is reached. The user can likewise lower the convergence threshold to see if the model outputs better results, again consuming more running time.
 
 `-m | --clustering`
 Because the number of input reference sources is the major factor affecting the running time of SourceID-NMF, reducing the number of input sources will speed up the process. One possible approach is to cluster the sources and use representative sources as input. We incorporate this option into SourceID-NMF for the convenience of our users. If users want to do a rough discovery, they can first cluster the sources and then use representative sources as input for source tracking.
+
+`-f | --clustering threshold`
+
 
 ## Demo
 Here, we provide some datasets for SourceID-NMF testing. The /data folder has one test data set containing two txt input files, "nmf_data.txt" and "name.txt". We can run it on the test data by running the following command:
