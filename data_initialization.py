@@ -4,7 +4,7 @@ import numpy as np
 
 def standardization(matrix):
     matrix_sum = np.sum(matrix, axis=0)
-    matrix = matrix / (matrix_sum[np.newaxis, :]+1e-16)
+    matrix = matrix / (matrix_sum[np.newaxis, :] + 1e-16)
     return matrix
 
 
@@ -13,7 +13,7 @@ def unknown_initialize(sources, sinks):
     unknown_pre = sinks - np.sum(sources, axis=1)
     unknown_zero = np.zeros((unknown_pre.shape[0],))
     unknown_init = np.vstack((unknown_pre, unknown_zero))
-    unknown_init = np.max(unknown_init, axis=0)+1e-16
+    unknown_init = np.max(unknown_init, axis=0)
     unknown_init = unknown_init.reshape((-1, 1))
     unknown_init = standardization(unknown_init)
     return unknown_init
