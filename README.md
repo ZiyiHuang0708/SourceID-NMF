@@ -64,7 +64,6 @@ Options
 -i | --input:        A path to an input.txt file: Input of count table.
 -n | --name:         A path to an name.txt file: Data labels for input data. 
 -o | --output:       A path to an output.txt file: Output of estimated proportions.
--m | --perf:         A path to an output.txt file: Output of model performance including jsd_wy and diff_xwh.
 ```
 Suppose a dataset has 19 sources, represented by D1, D2,... ,D19, and 9 sinks, represented by D20, D21,... , D28.
 
