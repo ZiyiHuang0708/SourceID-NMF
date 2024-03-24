@@ -63,7 +63,7 @@ sources = np.array(sources).T  # organize and summarize all sources to prepare i
 sinks = np.array(sinks).T  # organize and summarize all sinks to prepare inputs for the model
 sources_label.append('unknown')  # adding unknown sources to the source's label
 sources_jsd = source_jsd_estimation(sources)
-print("The Jensen Shannon divergence between the original source data is", sources_jsd)
+print("The average Jensen Shannon Divergence between the original source data is", sources_jsd)
 
 if mode == 'cluster':
     corr_matrix = jsd_correlation_matrix(sources)
