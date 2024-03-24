@@ -150,7 +150,7 @@ This parameter represents the convergence threshold of the model. We set it to t
 Because the number of input reference sources is the major factor affecting the running time of SourceID-NMF, reducing the number of input sources will speed up the process. One possible approach is to cluster the sources and use representative sources as input. We incorporate this option into SourceID-NMF for the convenience of our users. If users want to do a rough discovery, they can first cluster the sources and then use representative sources as input for source tracking.
 
 `-f | --clustering threshold`
-This parameter represents the convergence threshold of clustering algorithm. We set it to the default value of 0.25. Depending on the degree of similarity between the sources, we cluster the sources by setting a minimum threshold. We combine the minimum JSD between the sources for sequential clustering until the JSD between the sources exceeds the threshold to complete the clustering.
+This parameter represents the minimum threshold for hierarchical merging sources. We set it to the default value of 0.25.
 
 ## Demo
 Here, we provide some datasets for SourceID-NMF testing. The /data folder has one test data set containing two txt input files, "nmf_data.txt" and "name.txt". We can run it on the test data by running the following command:
